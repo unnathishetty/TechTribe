@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>User Registration</title>
+	<link rel="stylesheet" type="text/css" href="css/eregister.css">
+</head>
+
+<body>
+	<header><br>
+        <h2>&nbsp&nbsp&nbsp&nbsp</h2>
+		<h2 class="ii">&nbsp&nbsp&nbsp&nbspECO PATH</h2>
+ <div class="main">
+ 	<ul>
+        <a href="index.html">Home</a>
+        <a href="About.html">About</a>
+        <a href="FAQ.html">FAQ</a>
+ 		<a href="Activities.html">Activities</a>
+        <a href="Accomplisments.html">Accomplishments</a>
+ 	</ul>
+</div>
+<br>
+<div class="container">
+     <h1>Register Here!!</h1><br>
+	<form action="SRegister.php" method="POST">
+		<div class="form_input">
+			<input type="text"  name="nam" placeholder="Full Name" required><br>
+			<input type="text"  name="un" placeholder="Username" required><br>
+			<input type="password"  name="pas" placeholder="Password" required><br><br>
+			<input type="text"  name="age" placeholder="Age" required><br><br>
+			Gender:
+			<input type="radio" name="gender" value="Male"> Male<br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+            <input type="radio" name="gender" value="Female"> Female<br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+            <input type="radio" name="gender" value="Others"> Other <br><br>
+            Branch:
+			<input type="radio" name="branch" value="cse">CSE<br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+            <input type="radio" name="branch" value="ece">ECE<br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+            <input type="radio" name="branch" value="me">ME<br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+            <input type="radio" name="branch" value="cv">CV<br><br>
+            <input type="text" name="cn" placeholder="Contact Number" required><br>
+           <input type="text" name="email" placeholder="Email ID" required><br>
+			<input type="submit" name="" value="Submit" ><br><br>
+		</div>
+	</form>
+  </div>
+
+</header>
+</body>
+</html>
