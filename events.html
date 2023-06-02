@@ -1,78 +1,136 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    
-
-
-<meta charset="UTF-8" />
-<meta name="language" content="ES" />
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-<meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
-<!--FONT AWESOME-->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<link rel="stylesheet" href="css/index.css">
-<script src="script.js"></script>
-<!--GOOGLE FONTS-->
-<link rel="preconnect" href="https://fonts.googleapis.com" />
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Kanit:wght@100;200;400;500;600;700;800;900&family=Mukta:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet" />
-
-<!--PLUGIN-->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
-<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css">
-	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css">
-<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eco Club</title>
 </head>
+<link rel="stylesheet" href="style.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Changa+One&family=Ubuntu:wght@300&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.10.2/fullcalendar.min.css" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.10.2/fullcalendar.min.js"></script>
+<style>
+    /* style reset */
+    body {
+        margin: 0px;
+        padding: 0px;
+
+    }
+
+    /* .left {
+        border: 2px solid red;
+        display: inline-block;
+        position: absolute;
+        margin: auto;
+        left: 20px;
+        top: 10px;
+    }
+    .left img{
+        width: 80px;
+        height: 80px;
+        /* filter: invert(100%); */
+    /* }
+    .left div{
+        text-align: center;
+        font-family: 'Ubuntu', sans-serif;
+                /* font-style: italic; */
+
+
+
+    .mid {
+        display: block;
+        width: 40%;
+        margin: 10px auto;
+        border: 2px solid rgb(175, 214, 19);
+    }
+
+    /* .right {
+        position: absolute;
+        right: 20px;
+        top: 10px;
+        margin: auto;
+        display: block;
+        border: 2px solid rgb(15, 178, 214);
+    } */
+
+    .navbar {
+        display: inline-block;
+    }
+
+    .navbar li {
+        display: inline-block;
+    }
+
+    .navbar li a {
+        color: rgb(11, 2, 2);
+        text-decoration: none;
+        padding: 22px;
+        font-size: 17px;
+        font-family: 'Changa One', cursive;
+
+    }
+
+    .navbar li a:hover,
+    .navbar li a.active {
+        text-decoration: underline;
+        color: blue;
+    }
+
+    /* .btn{
+        color: azure;
+        background-color: #7a5757;;
+        padding: 4px 14px;
+        margin: 5px;
+        border: 5px solid grey;
+        border-radius: 10px;
+        font-size: 13px;
+        cursor: pointer;
+    }
+    .btn:hover{
+        background-color: #583817;
+        font-family: 'Ubuntu', sans-serif;
+    } */
+    .container {
+        /* border: 2px solid blue; */
+        margin: 65px;
+        padding: 31px;
+        border-radius: 15px;
+    }
+
+    .event_view {
+        /* border:2px solid red; */
+        display: inline-block;
+        text-align: center;
+        width: 90%;
+        margin: 50px;
+        padding: 30px;
+    }
+</style>
 
 <body>
+    <header class="header">
 
-<!--TOP MENU-->
-<menu class="top_menu flex">
-    <section class="flex_content">
-        <a href="emailto:ecopath@gmail.com">
-            <i class="fa fa-envelope-o"></i>
-            ecopath@gmail.com
-        </a>
-        <a href="tel:1234567890">
-            <i class="fa fa-headphones"></i>
-            1234567890
-        </a>
-    </section>
-    <section class="flex_content">
-        <a href="https://www.facebook.com/" title="Facebook"><i class="fa fa-facebook"></i></a>
-        <a href="https://www.instagram.com/" title="Instagram"><i class="fa fa-instagram"></i></a>
-        <a href="https://www.twitter.com/" title="Twitter"><i class="fa fa-twitter"></i></a>
-        <a href="https://www.youtube.com/" title="youtube"><i class="fa fa-youtube"></i></a>
-    </section>
-</menu>
+        <div class="mid">
+            <ul class="navbar">
+                <li><a href="home.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="event.html">Events</a></li>
+                <li><a href="accomplishment.html">Accomplishments</a></li>
+            </ul>
 
-<!--NAV-->
-<nav>
-    <section class="flex_content">
-        <figure class="logo fixed_flex">
-           
-        </figure>
-    </section>
-    <section class="flex_content nav_content" id="nav_content">
-        <a href="index.html" class="active">Home</a>
-        <a href="about.html">About</a>
-        <a href="activities.html">Activities</a>
-        <a href="events.html" class="contact_btn">Events</a>
-    </section>
-</nav>
+        </div>
 
-<!--HEADER-->
-<header class="flex">
-    <article>
-        <h1 class="title big">ECO PATH</h1>
-        <p class="he">Empowering Environmental Stewards Through Transformative Education</p>
-    </article>
-    
-</header>
-<body>
-	<div id="event_view" class="event_view">
+    </header>
+    <div id="event_view" class="event_view">
         <h2>
             Upcoming Activities
         </h2>
@@ -132,7 +190,6 @@
             });
         </script>
     </div>
+</body>
 
-</body>
-</body>
 </html>
