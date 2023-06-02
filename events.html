@@ -72,6 +72,66 @@
     
 </header>
 <body>
+	<div id="event_view" class="event_view">
+        <h2>
+            Upcoming Activities
+        </h2>
+    </div>
+    <div class="container" id="cont">
+        <div id="calendar"></div>
+
+        <div id="event-modal" style="display: none;">
+            <input type="text" id="event-title" placeholder="Event Title" /><br />
+            <input type="text" id="event-start" placeholder="Start Date" /><br />
+            <input type="text" id="event-end" placeholder="End Date" /><br />
+            <button id="save-event">Save</button>
+        </div>
+
+        <script>
+            $(document).ready(function () {
+                var calendar = $('#calendar').fullCalendar({
+                    defaultView: 'month',
+                    editable: true, // Allow events to be dragged and resized
+                    selectable: true, // Allow date selection
+                    selectHelper: true,
+                    events: [], // Start with an empty events array
+
+                    // Event triggered when a day is clicked
+                    dayClick: function (date, jsEvent, view) {
+                        // Display the event modal for entering details
+                        $('#event-modal').show();
+
+                        // Set the selected date as the default start and end date
+                        $('#event-start').val(date.format());
+                        $('#event-end').val(date.format());
+
+                        // Save button click event
+                        $('#save-event').click(function () {
+                            var title = $('#event-title').val();
+                            var start = $('#event-start').val();
+                            var end = $('#event-end').val();
+
+                            // Create a new event object
+                            var event = {
+                                title: title,
+                                start: start,
+                                end: end
+                            };
+
+                            // Add the event to the calendar
+                            calendar.fullCalendar('renderEvent', event);
+
+                            // Clear the input fields and hide the modal
+                            $('#event-modal').hide();
+                            $('#event-title').val('');
+                            $('#event-start').val('');
+                            $('#event-end').val('');
+                        });
+                    }
+                });
+            });
+        </script>
+    </div>
 
 </body>
 </body>
