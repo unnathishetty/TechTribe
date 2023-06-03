@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Contact Form</title>
+  <link rel="stylesheet" href="css/form.css">
+  <script src="form.js"></script>
+  <link rel="stylesheet" href="css/index.css">
+  <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+</script>
+<script type="text/javascript">
+   (function(){
+      emailjs.init("RUO7DLxFfPWgmuVWL");
+   })();
+</script>
+
+<script type="text/javascript">
+    (function() {
+        emailjs.init('RUO7DLxFfPWgmuVWL');
+    })();
+  
+</script>
+</head>
+<body>
+    <!--NAV-->
+    <nav>
+        <section class="flex_content">
+            <figure class="logo fixed_flex">
+               
+            </figure>
+        </section>
+        <section class="flex_content nav_content" id="nav_content">
+            <a href="main.html" class="active">Home</a>
+            <a href="about.html">About</a>
+            <a href="activities.html">Activities</a>
+            <a href="events.html" class="contact_btn">Events</a>
+    </nav>
+    
+    &nbsp&nbsp&nbsp&nbsp
+  <h1>Contact Form</h1>
+
+  <form id="contact-form">
+    <label for="email">Email:</label>
+    <input type="email" id="email_id" placeholder="emailid" required><br>
+
+    <label for="message">Message:</label><br>
+    <textarea id="message" name="message" rows="5" placeholder="Message" required></textarea><br>
+    <button onclick="sendMail">Send</button>
+  </form>
+
+  <!-- <script>
+    function Sendmail(){
+        var params = {
+            email_id:document.getElementById("email_id").value,
+            message=document.getElementById("message".value)
+        }
+        emailjs.send('service_x7h9w0j', 'template_u0l5r0c', params).then(function(res) {
+            alert("Success!" +res.status);
+        })
+    }
+  </script> -->
+</body>
+</html>
